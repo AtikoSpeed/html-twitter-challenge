@@ -7,6 +7,7 @@
 
 body {
   height: 100vh;
+  overflow: hidden;
 }
 
 .fa-regular,
@@ -35,6 +36,8 @@ body {
 body {
   display: grid;
   grid-template-columns: 2fr 5fr 2fr;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 /* Padding */
@@ -60,6 +63,7 @@ main {
 }
 
 .home-bar {
+  display: flex;
   height: 50px;
   margin-top: 10px;
   padding: 0 10px;
@@ -69,12 +73,22 @@ main {
   border-color: lightgreen;
 }
 
-.post-box {
+.hb-icon {
+  display: flex;
+  width: 100%;
+  font-size: 25px;
+  justify-content: right;
+  color: lightgreen;
+}
+
+.post-box,
+.post-card {
   display: grid;
   padding: 10px;
   padding-bottom: 4px;
   grid-template-columns: min-content auto;
   grid-template-rows: 1fr 1fr;
+  margin-bottom: 10px;
   border: 0;
   border-bottom: 6px;
   border-color: lightgreen;
@@ -86,20 +100,26 @@ main {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .pb-top,
-.pb-bottom {
+.pc-top,
+.pb-bottom,
+.pc-bottom {
   grid-column: 2;
 }
 
-.pb-top {
+.pb-top,
+.pc-top {
+  display: flex;
   width: 100%;
   grid-row: 1 / span 1;
 }
 
-#post-text {
+.post-text,
+.post-title,
+.post-content {
   display: flex;
   width: 100%;
   height: 100%;
@@ -107,7 +127,8 @@ main {
   font-size: medium;
 }
 
-.pb-bottom {
+.pb-bottom,
+.pc-bottom {
   display: grid;
   grid-row: 2 / span 1;
   justify-content: left;
@@ -120,7 +141,8 @@ main {
   border-color: lightgreen;
 }
 
-.pb-bottom-icons {
+.pb-bottom-icons,
+.pc-bottom-icons {
   display: flex;
   grid-column: 1 / span 1;
   justify-content: left;
@@ -132,11 +154,13 @@ main {
   gap: 10px;
 }
 
-.pb-bottom-icons i:hover {
+.pb-bottom-icons i:hover,
+.hb-icon i:hover {
   text-shadow: 1px 1px 5px pink;
 }
 
-.pb-bottom-icons i:active {
+.pb-bottom-icons i:active,
+.hb-icon i:active {
   text-shadow: 0 0 0;
   color: black;
 }
@@ -164,6 +188,95 @@ main {
   color: white;
 }
 
+.post-card {
+  grid-template-rows: auto auto;
+  margin-bottom: 0;
+  border: 0;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: lightgreen;
+}
+
+.pc-top {
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.post-title {
+  grid-row: 1;
+  align-items: start;
+  gap: 5px;
+}
+
+.post-title p {
+  color: gray;
+}
+
+.mention {
+  color: lightgreen;
+}
+
+.post-content {
+  margin-top: 2px;
+  grid-row: 2;
+}
+
+.post-content-pic {
+  display: flex;
+  grid-row: 3;
+  justify-content: left;
+  margin: 10px;
+}
+
+.post-content-pic img {
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px gray;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: top;
+  transition: 0.05s;
+}
+
+.post-content-pic img:hover {
+  object-fit: contain;
+}
+
+.post-content-pic img:active {
+  position: absolute;
+  height: 100%;
+  width: max-content;
+  left: 33%;
+  top: 0;
+  transition: 0.05s;
+}
+
+.pc-bottom {
+  grid-column: 1 / span 2;
+  border: 0;
+}
+
+.pc-bottom-icons {
+  grid-column: 1 / span 2;
+  justify-content: space-evenly;
+  color: gray;
+  padding: 0;
+}
+
+.loved {
+  color: red;
+  font-size: 22px;
+}
+
+.pc-bottom-icons i:hover {
+  text-shadow: 1px 1px 5px lightgreen;
+}
+
+.pc-bottom-icons i:active {
+  text-shadow: 0 0 0;
+  color: black;
+}
+
 /* Right bar where the search is */
 aside {
   display: inline;
@@ -187,6 +300,7 @@ aside {
   border-radius: 15px;
   gap: 20px;
 }
+
 .news-card h3 {
   border: 0;
   border-bottom: 1px;
@@ -225,11 +339,4 @@ input {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-}
-
-.post {
-  border-color: lightgreen;
-  border: 1px;
-  border-top: 0;
-  border-style: solid;
 }
