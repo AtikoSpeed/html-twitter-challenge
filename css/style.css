@@ -23,3 +23,14 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
+body {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+}
+
+nav {
+}
+
+main {
+}
