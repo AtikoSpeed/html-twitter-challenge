@@ -27,11 +27,6 @@ body {
   font-style: normal;
 }
 
-#main-logo {
-  max-height: 50px;
-  max-width: 50px;
-}
-
 /* Page grid setting */
 body {
   display: grid;
@@ -50,7 +45,55 @@ nav {
 nav {
   display: grid;
   grid-column: 1 / span 1;
-  background-color: red;
+  grid-template-rows: min-content auto;
+}
+
+#main-logo {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+#main-logo:hover {
+  fill: lightgreen;
+}
+
+.nav-logo {
+  grid-row: 1 / span 1;
+  margin-bottom: 10px;
+}
+
+.nav-buttons {
+  display: inline;
+  height: 66%;
+}
+
+.nav-button {
+  margin: 25px;
+}
+
+.selected {
+  color: lightgreen;
+}
+
+.nav-button:hover {
+  text-shadow: 1px 1px 10px lightgreen;
+}
+
+.selected.nav-button:hover {
+  text-shadow: 0 0 0;
+}
+
+.nav-button:active {
+  text-shadow: 0 0 0;
+  color: lightgreen;
+}
+
+#left-button {
+  height: 60px;
+  width: 100%;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: large;
 }
 
 /* Middle section where the main content is */
@@ -66,11 +109,16 @@ main {
   display: flex;
   height: 50px;
   margin-top: 10px;
-  padding: 0 10px;
+  padding: 0 10px 0 0;
   border: 0;
   border-bottom: 2px;
   border-style: solid;
   border-color: lightgreen;
+}
+
+.burger {
+  visibility: hidden;
+  font-size: 0;
 }
 
 .hb-icon {
@@ -246,8 +294,8 @@ main {
   position: absolute;
   height: 100%;
   width: max-content;
-  left: 33%;
   top: 0;
+  left: 30vw;
   transition: 0.05s;
 }
 
@@ -339,4 +387,44 @@ input {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+}
+
+/* Responsivity */
+
+@media (max-width: 1000px) {
+  body {
+    margin: 0;
+    border: 0;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .page-title {
+    visibility: hidden;
+  }
+  .burger {
+    visibility: visible;
+    font-size: xx-large;
+    padding-left: 5px;
+  }
+  main {
+    grid-column: 1;
+    grid-row: 1;
+    border: 0;
+  }
+  nav,
+  aside {
+    visibility: hidden;
+  }
+  #main-logo {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 47%;
+    margin-top: 3px;
+  }
+  .post-content-pic img:active {
+    height: max-content;
+    width: 100%;
+    left: 0;
+  }
 }

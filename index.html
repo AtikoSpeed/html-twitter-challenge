@@ -16,10 +16,43 @@
     <link href="logo-ddd.svg" rel="icon" media="(prefers-color-scheme: dark)" />
   </head>
   <body class="ubuntu-regular">
-    <nav><img id="main-logo" src="logo.svg" alt="Gammr Logo" /> Navbar</nav>
+    <nav>
+      <svg
+        class="nav-logo"
+        fill="black"
+        id="main-logo"
+        viewBox="0 0 207.5 207.5"
+      >
+        <polygon
+          points="42.086,0 29.475,0 29.475,35 42.086,35 42.086,207.5 77.086,207.5 77.086,35 79.52,35 143.025,35 143.025,45.49 
+	178.025,45.49 178.025,0 79.52,0 "
+        />
+      </svg>
+      <div class="nav-buttons">
+        <h1 class="nav-button selected">
+          <i class="fa-solid fa-house"></i> Home
+        </h1>
+        <h1 class="nav-button"><i class="fa-solid fa-hashtag"></i> Explore</h1>
+        <h1 class="nav-button">
+          <i class="fa-solid fa-bell"></i> Notifications
+        </h1>
+        <h1 class="nav-button">
+          <i class="fa-solid fa-envelope"></i> Messages
+        </h1>
+        <h1 class="nav-button">
+          <i class="fa-solid fa-bookmark"></i> Bookmarks
+        </h1>
+        <h1 class="nav-button"><i class="fa-solid fa-user"></i> Profile</h1>
+        <h1 class="nav-button"><i class="fa-solid fa-ellipsis"></i> More</h1>
+        <button id="left-button" class="post-button" type="submit">
+          Gamm!
+        </button>
+      </div>
+    </nav>
     <main>
       <div class="home-bar">
-        <h1>Home</h1>
+        <div class="burger"><i class="fa-solid fa-bars burger"></i></div>
+        <h1 class="page-title">Home</h1>
         <div class="hb-icon"><i class="fa-solid fa-gear"></i></div>
       </div>
       <div class="post-box">
