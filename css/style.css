@@ -1,3 +1,4 @@
+/* General settings */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -8,7 +9,8 @@ body {
   height: 100vh;
 }
 
-.fa-regular {
+.fa-regular,
+.fa-solid {
   margin: 5px;
 }
 
@@ -29,22 +31,26 @@ body {
   max-width: 50px;
 }
 
+/* Page grid setting */
 body {
   display: grid;
   grid-template-columns: 2fr 5fr 2fr;
 }
 
+/* Padding */
 aside,
 nav {
   padding: 10px;
 }
 
+/* Navigation bar that is on the left */
 nav {
   display: grid;
   grid-column: 1 / span 1;
   background-color: red;
 }
 
+/* Middle section where the main content is */
 main {
   border: 0;
   border-right: 2px;
@@ -55,7 +61,7 @@ main {
 
 .home-bar {
   height: 50px;
-  margin: 10px 0;
+  margin-top: 10px;
   padding: 0 10px;
   border: 0;
   border-bottom: 2px;
@@ -63,6 +69,102 @@ main {
   border-color: lightgreen;
 }
 
+.post-box {
+  display: grid;
+  padding: 10px;
+  padding-bottom: 4px;
+  grid-template-columns: min-content auto;
+  grid-template-rows: 1fr 1fr;
+  border: 0;
+  border-bottom: 6px;
+  border-color: lightgreen;
+  border-style: solid;
+}
+
+.pb-propic {
+  display: flex;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.pb-top,
+.pb-bottom {
+  grid-column: 2;
+}
+
+.pb-top {
+  width: 100%;
+  grid-row: 1 / span 1;
+}
+
+#post-text {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  font-size: medium;
+}
+
+.pb-bottom {
+  display: grid;
+  grid-row: 2 / span 1;
+  justify-content: left;
+  align-items: center;
+  grid-template-columns: 1fr min-content;
+  width: 100%;
+  border: 0;
+  border-top: 2px;
+  border-style: solid;
+  border-color: lightgreen;
+}
+
+.pb-bottom-icons {
+  display: flex;
+  grid-column: 1 / span 1;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  color: lightgreen;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.pb-bottom-icons i:hover {
+  text-shadow: 1px 1px 5px pink;
+}
+
+.pb-bottom-icons i:active {
+  text-shadow: 0 0 0;
+  color: black;
+}
+
+.post-button {
+  display: flex;
+  grid-column: 2 / span 1;
+  background-color: lightgreen;
+  border: 0;
+  height: 30px;
+  padding: 0 15px 0 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  justify-content: right;
+  align-items: center;
+}
+
+.post-button:hover {
+  box-shadow: 1px 1px 5px lightgreen;
+}
+
+.post-button:active {
+  box-shadow: 0 0 0;
+  background-color: black;
+  color: white;
+}
+
+/* Right bar where the search is */
 aside {
   display: inline;
   padding: 10px;
@@ -106,7 +208,7 @@ input {
   border-radius: 50%;
   background-color: inherit;
   border: 0;
-  padding: 0 20px;
+  padding: 0 10px;
   width: 50px;
 }
 
@@ -115,9 +217,10 @@ input {
   border: 2px;
   border-style: solid;
   border-color: lightgreen;
-  padding: 0 18px;
+  padding: 0 8px;
 }
 
+/* General settings */
 .propic {
   border-radius: 50%;
   width: 50px;
