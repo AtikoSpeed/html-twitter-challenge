@@ -65,6 +65,11 @@ nav {
 .nav-buttons {
   display: inline;
   height: 66%;
+  cursor: default;
+}
+
+.nav-button::selection {
+  background-color: white;
 }
 
 .nav-button {
