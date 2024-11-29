@@ -1,37 +1,29 @@
-# Twitter Clone
+# Twitter Clone Project
 
-For this exercise, we will be building a clone of Twitter:
+A simple Twitter clone created as a front-end development exercise. The project demonstrates responsive web design and modern CSS techniques.
 
-![twitter](images/twitter.png)
+## Features
 
-This will put into practice everything we have learned so far about HTML & CSS. The below image shows level of detail you should replicate from Twitter:
+- Responsive layout adapting to different screen sizes
+- Interactive hover and click effects
+- User interface for composing posts
+- Like, retweet and share buttons
+- Custom SVG logo
+- Semantic HTML structure
+- CSS Grid layout system
 
-![twitter clone](images/example.png)
+## Technologies
 
-## Setup
-1. Fork this repository to your account.
-2. Clone the forked repository to your local machine
-3. Open a Pull Request back to the upstream repo
+- HTML5
+- CSS3
+- Font Awesome Icons
+- Google Fonts
+- SVG Graphics
 
-## Instructions
-- Use the HTML elements you've learned about so far to define the page content
-- Use an external CSS stylesheet to style the page
-- Use CSS Grid for the layout and components
-- You should start *without* images and then add them later at the end of the exercise once the basic criteria has been met
+## Live Demo
 
-### Tips
-- Breakdown the page into sections
-- Pay attention to alignment and spacing
-- Work section by section until it looks good
+View the live project: [atakan.ninja](https://atakan.ninja)
 
-## Assesment Criteria
-* &#9745; Layout the main page elements (left-hand menu, tweet feed and right side-bar) using CSS Grid. CSS Grid should also be used to layout individual tweets.
-* &#9745; Define the page contents using HTML with appropriate elements. HTML should be well formatted.
-* &#9745; Style the page using a mixture of Type, ID and Class CSS selector types
-* &#9745; Implement hover and selected state for the left-hand menu links.
+## Author
 
-### Extension Criteria
-* &#9745; Make the layout responsive so that the side-bars are removed on lower resolution devices
-* &#9745; Include images using the `img` and `svg` tags.
-    * Get the source for the icon images from the Twitter website as SVG and include them with `svg` tags
-    * Use a local file for the profile image. Research how to use CSS to to make the profile image appear as a circle
+Created by AtikoSpeed
